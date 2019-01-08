@@ -1,0 +1,6 @@
+framework module ObserveIt {
+  umbrella header "ObserveIt-umbrella.h"
+
+  export *
+  module * { export * }
+}

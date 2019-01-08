@@ -1,0 +1,16 @@
+PODS:
+  - ObserveIt (2.0.2)
+
+DEPENDENCIES:
+  - ObserveIt (from `./`)
+
+EXTERNAL SOURCES:
+  ObserveIt:
+    :path: "./"
+
+SPEC CHECKSUMS:
+  ObserveIt: 4a8e5c24357d12e517d084b0145eb07f88406c6e
+
+PODFILE CHECKSUM: 76edc4952ada0ee324133e589ddab4f7cf22aaa3
+
+COCOAPODS: 1.5.3

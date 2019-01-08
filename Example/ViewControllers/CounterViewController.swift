@@ -21,9 +21,8 @@ class CounterViewController: UIViewController {
       
         let listenerLabel = BaseLabel(frame: .zero)
         view.addSubview(listenerLabel)
-        listenerLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         listenerLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        listenerLabel.bottomAnchor.constraint(equalTo: counterView.topAnchor, constant: 20).isActive = true
+        listenerLabel.bottomAnchor.constraint(equalTo: counterView.topAnchor, constant: -20).isActive = true
         
         ex.observe(with: self, key: ExampleEnum.property.rawValue, callback: { newValue in
             guard let value = newValue.value as? String else { return }

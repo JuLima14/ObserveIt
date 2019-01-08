@@ -10,7 +10,7 @@
 		BA21874021E3FDC800EB9468 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA21873F21E3FDC800EB9468 /* Assets.xcassets */; };
 		BA21874321E3FDC800EB9468 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA21874121E3FDC800EB9468 /* LaunchScreen.storyboard */; };
 		BA21875221E3FDEE00EB9468 /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA21874A21E3FDED00EB9468 /* CounterViewController.swift */; };
-		BA21875321E3FDEE00EB9468 /* TestObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA21874C21E3FDED00EB9468 /* TestObject.swift */; };
+		BA21875321E3FDEE00EB9468 /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA21874C21E3FDED00EB9468 /* Example.swift */; };
 		BA21875421E3FDEE00EB9468 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA21874E21E3FDED00EB9468 /* CounterView.swift */; };
 		BA21875521E3FDEE00EB9468 /* BaseLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA21874F21E3FDED00EB9468 /* BaseLabel.swift */; };
 		BA21875621E3FDEE00EB9468 /* CounterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA21875021E3FDED00EB9468 /* CounterButton.swift */; };
@@ -28,7 +28,7 @@
 		BA21874221E3FDC800EB9468 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA21874421E3FDC800EB9468 /* ObserveIt-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ObserveIt-Info.plist"; sourceTree = "<group>"; };
 		BA21874A21E3FDED00EB9468 /* CounterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterViewController.swift; sourceTree = "<group>"; };
-		BA21874C21E3FDED00EB9468 /* TestObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestObject.swift; sourceTree = "<group>"; };
+		BA21874C21E3FDED00EB9468 /* Example.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Example.swift; sourceTree = "<group>"; };
 		BA21874E21E3FDED00EB9468 /* CounterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		BA21874F21E3FDED00EB9468 /* BaseLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseLabel.swift; sourceTree = "<group>"; };
 		BA21875021E3FDED00EB9468 /* CounterButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterButton.swift; sourceTree = "<group>"; };
@@ -100,7 +100,7 @@
 		BA21874B21E3FDED00EB9468 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				BA21874C21E3FDED00EB9468 /* TestObject.swift */,
+				BA21874C21E3FDED00EB9468 /* Example.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -197,15 +197,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ObserveIt-Example/Pods-ObserveIt-Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ObserveIt/ObserveIt.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObserveIt.framework",
 			);
@@ -219,15 +215,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-ObserveIt-Example-checkManifestLockResult.txt",
 			);
@@ -248,7 +240,7 @@
 				BA21875721E3FDEE00EB9468 /* BaseButton.swift in Sources */,
 				BA21875521E3FDEE00EB9468 /* BaseLabel.swift in Sources */,
 				BA21875921E3FE2100EB9468 /* AppDelegate.swift in Sources */,
-				BA21875321E3FDEE00EB9468 /* TestObject.swift in Sources */,
+				BA21875321E3FDEE00EB9468 /* Example.swift in Sources */,
 				BA21875421E3FDEE00EB9468 /* CounterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -32,7 +32,7 @@ ex.observe(with: self, key: ExampleEnum.property.rawValue, callback: { newValue 
             print(value)
 })
 	
-//to test this
+//to trigger the api call modify the property
 ex.property = "modify the value of the property observed"
 
 //to stop listen
@@ -64,7 +64,7 @@ ex.ignore(with: self, key: ExampleEnum.property.rawValue)
 
 ## CocoaPods
 ```Swift
-platform :ios, '9.0'
+platform :ios, '10.0'
 
 target 'AppName' do
 

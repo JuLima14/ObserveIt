@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.homepage      = "https://github.com/JuLima14/ObserveIt"
   s.license = { :type => "MIT", :file => "LICENSE" }
   s.author        = "Julian Lima"
-  s.platform      = :ios, "9.0"
+  s.platform      = :ios, "10.0"
   s.source        = { :git => "https://github.com/JuLima14/ObserveIt.git", :tag => "1.0.0" }
   s.swift_version = "4.2"
   s.frameworks = 'UIKit', 'Foundation'

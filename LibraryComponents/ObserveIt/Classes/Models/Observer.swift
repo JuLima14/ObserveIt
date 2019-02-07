@@ -8,10 +8,10 @@
 
 open class Observer: NSObject {
     
-    var observer: NSObject!
-    var callback: Callback!
-    var asyncCallback: Bool!
-    var isExecuting: Bool!
+    var observer: NSObject
+    var callback: Callback
+    var asyncCallback: Bool
+    var isExecuting: Bool
     
     init(observer: NSObject, callback: @escaping Callback) {
         self.observer = observer

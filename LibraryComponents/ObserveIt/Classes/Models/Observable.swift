@@ -20,19 +20,21 @@ open class Observable: NSObject {
         }
     }
     open func observe(with object: NSObject, key: String, asyncCallback: Bool = true, callback: @escaping Callback) {
-
+        
         if observersBinding[key] != nil {
             // Check if the binding already exists.
-            var observerList = observersBinding[key]!
-            for observer in observerList {
-                if observer.observer == object {
-                    return
+            if var observerList = observersBinding[key] {
+                for observerItem in observerList {
+                    if observerItem.observer == object {
+                        return
+                    }
                 }
+                
+                //Add binding to stack
+                let observer = Observer(observer: object, asyncCallback: asyncCallback, callback: callback)
+                observerList.append(observer)
+                observersBinding[key] = observerList
             }
-            // Add binding to stack.
-            let observer = Observer(observer: object, asyncCallback: asyncCallback, callback: callback)
-            observerList.append(observer)
-            observersBinding[key] = observerList
         }
         else {
             
@@ -47,27 +49,26 @@ open class Observable: NSObject {
     }
     open func ignore(with object: NSObject, key: String) {
         
-        if observersBinding[key] != nil {
-
-            // Find the binding.
-            for (thisKey, var list) in observersBinding {
-                var index = 0
-                var found = false
-                
-                for binding in list {
-                    if binding.observer == object {
-                        found = true
-                        break
-                    }
-                    index += 1
+        guard let _ = observersBinding[key] else { return }
+        
+        // Find the binding.
+        for (thisKey, var list) in observersBinding {
+            var index = 0
+            var found = false
+            
+            for binding in list {
+                if binding.observer == object {
+                    found = true
+                    break
                 }
-                if found && key == thisKey {
-                    list.remove(at: index)
-                    observersBinding[key] = list
-                    if list.count == 0 {
-                        observersBinding[key] = nil
-                        removeObserver(self, forKeyPath: key)
-                    }
+                index += 1
+            }
+            if found && key == thisKey {
+                list.remove(at: index)
+                observersBinding[key] = list
+                if list.count == 0 {
+                    observersBinding[key] = nil
+                    removeObserver(self, forKeyPath: key)
                 }
             }
         }
